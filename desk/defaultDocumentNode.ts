@@ -1,6 +1,7 @@
 import {DefaultDocumentNodeResolver} from 'sanity/desk'
 import Iframe from 'sanity-plugin-iframe-pane'
 import {SanityDocument} from 'sanity'
+import {localPreviewHost, productionPreviewHost, previewToken} from '../vars'
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
   switch (schemaType) {
@@ -21,9 +22,14 @@ export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}
   }
 }
 
-function resolvePreviewUrl(doc: any) {
-  const baseUrl = window.location.origin
+interface SluggedSanityDocument extends SanityDocument {
+  slug?: {
+    current?: string
+  }
+}
+
+function resolvePreviewUrl(doc: SluggedSanityDocument) {
+  const baseUrl = window.location.hostname == 'localhost' ? localPreviewHost : productionPreviewHost
   const urlPath = doc?.slug?.current ?? ''
-  const previewToken = process.env.NEXT_PUBLIC_SANITY_PREVIEW_TOKEN
   return `${baseUrl}/api/preview?redirect=/${urlPath}&token=${previewToken}`
 }
