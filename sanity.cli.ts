@@ -1,8 +1,9 @@
 import {defineCliConfig} from 'sanity/cli'
+import {projectId, dataset} from './vars'
 
 export default defineCliConfig({
   api: {
-    projectId: 'dgapgdsj',
-    dataset: 'production'
-  }
+    projectId: projectId,
+    dataset: dataset,
+  },
 })
