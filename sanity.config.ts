@@ -4,7 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {defaultDocumentNode} from './desk/defaultDocumentNode'
 import {deskStructure} from './desk/deskStructure'
-import {projectId, dataset} from './vars'
+import {projectId, dataset} from './env'
 
 // Singleton config
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])

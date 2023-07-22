@@ -1,7 +1,7 @@
 import {DefaultDocumentNodeResolver} from 'sanity/desk'
 import Iframe from 'sanity-plugin-iframe-pane'
 import {SanityDocument} from 'sanity'
-import {localPreviewHost, productionPreviewHost, previewToken} from '../vars'
+import {localPreviewHost, productionPreviewHost, previewToken} from '../env'
 
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
   switch (schemaType) {

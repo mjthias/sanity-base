@@ -1,5 +1,0 @@
-// export const projectId: string = ''
-// export const dataset: string = 'production'
-// export const localPreviewHost: string = 'localhost:3000'
-// export const productionPreviewHost: string = ''
-// export const previewToken: string = '1ee7bc5c-32df-4873-b698-a89db92a9e66'

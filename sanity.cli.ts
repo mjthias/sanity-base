@@ -1,5 +1,5 @@
 import {defineCliConfig} from 'sanity/cli'
-import {projectId, dataset} from './vars'
+import {projectId, dataset} from './env'
 
 export default defineCliConfig({
   api: {
