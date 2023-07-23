@@ -1,3 +1,8 @@
+export const projectTitle: string = assertValue(
+  process.env.SANITY_STUDIO_PROJECT_TITLE,
+  'Missing environment variable: SANITY_STUDIO_PROJECT_TITLE'
+)
+
 export const projectId: string = assertValue(
   process.env.SANITY_STUDIO_PROJECT_ID,
   'Missing environment variable: SANITY_STUDIO_PROJECT_ID'
