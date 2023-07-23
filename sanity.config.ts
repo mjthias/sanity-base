@@ -10,6 +10,8 @@ import {projectId, dataset} from './env'
 const singletonActions = new Set(['publish', 'discardChanges', 'restore'])
 const singletonTypes = new Set(['frontpage'])
 
+console.log(projectId)
+
 export default defineConfig({
   name: 'default',
   title: 'sanity-template-base',
