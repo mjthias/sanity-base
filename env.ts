@@ -13,11 +13,6 @@ export const dataset: string = assertValue(
   'Missing environment variable: SANITY_STUDIO_DATASET'
 )
 
-export const useCdn: boolean | string = assertValue(
-  process.env.SANITY_STUDIO_USE_CDN,
-  'Missing environment variable: SANITY_STUDIO_USE_CDN'
-)
-
 export const localPreviewHost: string = assertValue(
   process.env.SANITY_STUDIO_LOCAL_PREVIEW_HOST,
   'Missing environtment variable: SANITY_STUDIO_LOCAL_PREVIEW_HOST'
